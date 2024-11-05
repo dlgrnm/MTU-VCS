@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display+SC:ital@0;1&family=Sacramento&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --playfair: 'Playfair Display SC', serif;
+    --alice: 'Alice', serif;
+    --sacramento: 'Sacramento', serif;
+    --hover: #c7d93b;
+    --titleColor: #1d1a19;
+    --titleBorder: 1px solid #49423b;
+    --largeBorder: 1px solid #fff;
+    --logoColor: #444;
+    --sharBG: #dba539;
+    --footer: #805f1e;
+    --selection: rgb(241, 90, 34);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--playfair);
+    font-weight: 400;
+};
+
+::selection {
+    color: #fff;
+    background-color: var(--selection) !important;
+}
+
+p {
+    font-family: var(--alice);
+}
+
+.header {
+    width: 100%;
+}
+
+.header__mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 0;
+}
+
+.header__mobile .logo {
+    display: flex;
+    align-items: center;
+    font-family: var(--playfair);
+    font-size: 11.7px;
+    letter-spacing: .5em;
+}
+
+.shopName {
+    font-family: var(--playfair);
+    font-size: 11.7px;
+    letter-spacing: .5em;
+}
+
+.header__mobile .logo .logo__mobile {
+    width: 50px;
+    margin: 0 9px;
+}
+
+.header__mobile .icon {
+    margin-right: 1rem;
+}
+
+.header__hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://cdn.shopify.com/s/files/1/0261/4687/t/7/assets/img_homepage_slider1.jpg?v=839847293968337857);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__hero .heroCap {
+    text-align: center;
+    color: #fff;
+}
+
+.header__hero .heroCap .heroTitle {
+    font-family: var(--playfair);
+    font-size: 36px;
+    font-weight: 300;
+    padding: 0 36px 27.8px 36px;
+    font-style: italic;
+    border-bottom: var(--largeBorder);
+    letter-spacing: 0.05em;
+    line-height: 1;
+}
+
+.header__hero .heroCap .hero_text {
+    font-size: 54px;
+    font-family: var(--sacramento);
+    transition: .3s;
+}
+
+.header__hero .heroCap .hero_text:hover {
+    color: var(--hover);
+    cursor: pointer;
+}
+
+.header__desktop {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    color: #fff;
+    display: none;
+    margin-top: 1rem;
+}
+
+.header__desktop .desktop__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header__desktop .desktop__menu .menu__items {
+    padding: 0 32px 12px 32px;
+    font-family: var(--alice);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: .3s;
+    letter-spacing: .1em;
+}
+
+/* .header__desktop .desktop__menu .menu__items a {
+    color: #fff;
+} */
+
+.header__desktop .desktop__menu .menu__items:hover {
+    color: var(--hover);
+    cursor: pointer;
+}
+
+.header__desktop .desktop__menu .desktop__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__desktop .desktop__menu .desktop__logo img {
+    width: 100px;
+    margin: 0 3rem .6rem 3rem;
+}
+
+.header__desktop .desktop__menu .desktop__logo p {
+    transition: .3s;
+}
+
+.header__desktop .desktop__menu .desktop__logo p:hover {
+    color: var(--hover);
+    cursor: pointer;
+}
+
+.season {
+    text-align: center;
+    color: var(--titleColor);
+    padding: 1rem 0;
+}
+
+.season .season__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+
+.season .season__title h1 {
+    font-style: italic;
+    font-size: 36px;
+    padding-bottom: 1rem;
+    margin-bottom: 6px;
+    border-bottom: var(--titleBorder);
+    width: max-content;
+    line-height: 1.25;
+}
+
+.season .season__title .description {
+    font-family: var(--alice);
+    font-size: 21px;
+    line-height: 1.75;
+    margin-top: 5px;
+}
+
+.season__products {
+    width: 90%;
+    margin: auto;
+}
+
+.season__products .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.season__products .product img {
+    width: 95%;
+}
+
+.season__products .product .product__name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.season__products .product .product__name h1 {
+    line-height: 1;
+    font-size: 36px;
+    padding-bottom: 23.5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    width: 100%;
+}
+
+.season__products .product .product__name h1 span {
+    font-size: 21px;
+}
+
+.season__products .product .product__name .uri a {
+    font-size: 36px;
+    font-family: var(--sacramento);
+    text-decoration: none;
+    color: inherit;
+    transition: .3s;
+}
+
+.season__products .product .product__name .uri a:hover {
+    color: var(--hover);
+    cursor: pointer;
+}
+
+.img {
+    background-image: url(https://cdn.shopify.com/s/files/1/0261/4687/t/7/assets/img_homepage_divider.jpg?v=10908527258020221636);
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.footer {
+    background-color: var(--sharBG);
+    color: #fff;
+    padding: 1.5rem 0;
+}
+
+.footer__top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__main {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.footer__main .icon {
+    padding: 10px;
+    background-color: #fff;
+    color: var(--sharBG);
+    border-radius: 50%;
+    margin: 0 1.5rem;
+    transition: .3s;
+}
+
+.footer__main .icon:hover {
+    background-color: rgb(215, 78, 45);
+    cursor: pointer;
+}
+
+.footer__top img {
+    width: 100px;
+    margin-bottom: .75rem;
+}
+
+.footer__end {
+    text-align: center;
+}
+
+.footer__end h5 {
+    font-size: 21px;
+    width: 80%;
+    margin: auto;
+}
+
+@media(min-width: 640px) {
+    .header__hero .heroCap .heroTitle {
+        font-size: 81px;
+        padding: 0 81px 12px 81px;
+    }
+
+    .header__hero .heroCap .hero_text {
+        font-size: 72px;
+    }
+
+    .season .season__title h1 {
+        font-size: 72px;
+        padding: 0 72px 10px 72px;
+        margin-bottom: 5px;
+        line-height: 1;
+    }
+}
+
+@media(min-width: 768px){
+    .season .season__products {
+        display: flex;
+        width: 95%;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+
+    .season__products .product img {
+        width: 100%;
+    }
+
+    .season__products .product .product__name {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(29, 26, 25, 0.5);
+        color: #fff;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        transition: .3s;
+        opacity: 0;
+        padding: 0 3rem;
+    }
+
+    .season__products .product .product__name .uri {
+        transform: translateY(25px);
+        transition: .3s;
+        opacity: .3;
+    }
+
+    .season__products .product .product__name:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .season__products .product .product__name:hover .uri {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media(min-width: 1024px){
+
+    .header__mobile {
+        display: none;
+    }
+
+    .header__desktop {
+        display: block;
+    }
+
+    .header__hero .heroCap .heroTitle {
+        padding-bottom: 2rem;
+    }
+
+    .season__products .product .product__name {
+        width: 300px;
+        height: 300px;
+    }
+
+    .season {
+        margin-bottom: 6rem;
+    }
+}
+
+@media(min-width: 1200px){
+    .season .season__title .description {
+        margin: 2rem 0;
+    }
+
+    .season .season__title {
+        margin-top: 4rem;
+    }
+
+    .season__products .product .product__name {
+        width: 350px;
+        height: 350px;
+    }
+}
